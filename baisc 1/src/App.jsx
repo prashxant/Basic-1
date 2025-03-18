@@ -25,12 +25,15 @@ function Counter (){
         setCount(count + 1 )
     }
 
-
+function decreaseCounter(){
+  setCount(count - 1 )
+}
 
   return (
     <>
     <h1>{count}</h1>
     <button onClick={increaseCounter}>Increase Counter</button>
+    <button onClick={decreaseCounter}>Decrease Counter</button>
     </>
   )
 }
