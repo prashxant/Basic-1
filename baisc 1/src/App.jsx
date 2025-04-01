@@ -21,7 +21,7 @@ function App() {
       description: "What to know how to win big? Check out how these folks won $6000 in bounties."
     }])
   }
-
+<p>hi</p>
   return (
     <div style={{background: "#dfe6e9", height: "100vh", }}>
       <button onClick={addPost}>Add post</button>
