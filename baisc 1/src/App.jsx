@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PostComponent } from "./Post";
+import Hi from "./hi";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -23,7 +24,9 @@ function App() {
   }
 <p>hi</p>
   return (
+    
     <div style={{background: "#dfe6e9", height: "100vh", }}>
+      <Hi/>
       <button onClick={addPost}>Add post</button>
       <div style={{display: "flex", justifyContent: "center" }}>
         <div>
