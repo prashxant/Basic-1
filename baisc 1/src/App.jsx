@@ -11,6 +11,7 @@ function App() {
           <Route path="/" element={<Landing/>} >
             <Route path="/" element={<h1>Home</h1>} />
             <Route path="/neet/class-12" element={<Class12></Class12>} />
+            <Route path="/neet/class-11" element={<Class11></Class11>} />
             <Route path="*" element={<ErrorPage/>} />
           </Route>
         </Routes>
@@ -23,7 +24,7 @@ function App() {
     return <div >
       <Link to="/">Allen </Link>
       |
-      <Link to="/neet/class-11">Class 11 </Link>
+      <Link to="/neet/class-11" >Class 11 </Link>
       |
       <Link to="/neet/class-12"> Class12</Link>
       <div style={{
@@ -50,6 +51,12 @@ function App() {
     </div>
   }
 
+  function Class11(){
+    return <div>
+      hi wellcome to class 11
+    </div>
+
+  }
   function Class12(){
     const navigate = useNavigate()
 
