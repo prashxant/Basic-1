@@ -3,15 +3,19 @@ import React from 'react'
 function App() {
   return (
     <div>
-      <Card kuch={"hero hoon main"}/>
-      <Card kuch={"hero nahi hoon main"}/>
+      <Card>
+        <div>
+          hi my name is prashant
+        </div>
+      </Card>
+      <Card />
     </div>
   )
 }
 
-function Card({kuch}){
+function Card({children}){
   return <div>
-  {kuch}
+  {children}
   </div>
 }
 
