@@ -1,32 +1,41 @@
-import React, { useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
+
+const BulbContext = createContext();
+
+
+
 
 function State() {
     const [bulbOn,setBulbOn] = useState(true)
   return (
     <div>
-
-        <BulbState bulbOn={bulbOn}/>
-        <ToggleBlub setBulbOn={setBulbOn}/>
+        <BulbContext.Provider value={{bulbOn,setBulbOn}}>
+        <BulbState/>
+        <ToggleBlub />
+        </BulbContext.Provider>
     </div>
   )
 }
 
-        function BulbState ({bulbOn}){
-            
-        return<div>
-            {bulbOn?"Bulb is on":"Bulb  off "}
-        </div>
+        function BulbState (){
+            const {bulbOn} = useContext(BulbContext)
+            return<div>
+                {bulbOn?"Bulb  on":"Bulb  off "}
+            </div>
         }
 
        
 
-        function ToggleBlub({setBulbOn}){
+        function ToggleBlub(){
+            const {setBulbOn} = useContext(BulbContext)
+
+
             function Switch(){
                 setBulbOn(c => !c)
             }
-            return(<div>
-                <button onClick={Switch} >Bulb on Switch</button>
-            </div>
+         return( <div>
+                 <button onClick={Switch} >Bulb on Switch</button>
+                 </div>
             )}
 
 
