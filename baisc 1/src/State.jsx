@@ -25,7 +25,7 @@ function State() {
                 setBulbOn(c => !c)
             }
             return(<div>
-                <button onClick={Switch} >Bulb Switch</button>
+                <button onClick={Switch} >Bulb on Switch</button>
             </div>
             )}
 
