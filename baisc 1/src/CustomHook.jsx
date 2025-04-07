@@ -1,41 +1,15 @@
-import React, { useState } from 'react'
-
-function useCounter (){
-    const[count,setCount] = useState(0)
-    function handleClick(){
-    setCount(c => c+1)
-    }
-
-    return {
-        count : count,
-        handleClick: handleClick
-    }
-}
+import js from '@eslint/js';
+import React, { useEffect, useState } from 'react'
+import { usePostTitle , useFetch} from './hooks/hooksFetch';
 
 function CustomHook() {
-  
-
+  const {finalData} = useFetch("");
     return (
   
 <div>
-    <S/>
-    <S/>
-    <S/>
-    <S/>
+        {JSON.stringify(finalData)}
 </div>
   )
 }
-
-
-function S (){
-const {count , handleClick}= useCounter()
-    return <div>
-        
-    <div>
-        <button onClick={handleClick}>{count}</button>
-    </div>
-    </div>
-}
-
 
 export default CustomHook
