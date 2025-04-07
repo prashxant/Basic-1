@@ -1,11 +1,12 @@
 import React from 'react'
 import State from './State'
+import CustomHook from './CustomHook'
 
 function App() {
   return (
     <div>
 
-      <State></State>
+      <CustomHook/>
     </div>
   )
 }
