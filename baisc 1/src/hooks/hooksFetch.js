@@ -1,44 +1,45 @@
-import  { useEffect, useState } from 'react'
+// import  { useEffect, useState } from 'react'
 
-//custom hook//
-export function usePostTitle(){
+import { useEffect, useRef } from "react"
 
 
-    const [post , setPost] = useState()
+// export function useFetch(url){
 
-  async function getPost() {
-
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-    const json = await response.json();
-    setPost(json)
-  }
-
-  useEffect(()=>{
-
-    getPost()
-  },[])
-return post.title;
-}
-
-export function useFetch(url){
-
-  const [finalData,setFinalData]=useState({})
-
- async function getDetails(){
-    const response  = await fetch(url);
-    const json = await response.json();
-
-    setFinalData(json)
+//   const [finalData,setFinalData]=useState({})
+//   const [loading,setLoading]=useState(true)
 
   
- }
+//  async function getDetails(){
+//     setLoading(true)
+//     const response  = await fetch(url);
+//     const json = await response.json();
+//     setFinalData(json)
+//     setLoading(false)
 
-  useEffect(()=>{
+  
+//  }
 
-    getDetails();
-  },[])
+//   useEffect(()=>{
+
+//     getDetails();
+//   },[url])
+
+//   useEffect(()=>{
+//     setInterval(getDetails,10*1000)
+//   },[])
+
+//   return {finalData,loading}
+
+// }
+
+export const usePrev = (value)=>{
+ const ref =  useRef();
 
 
-  return finalData
+ useEffect(()=>{
 
+    ref.current = value
+ },[value])
+
+return ref.current
 }
