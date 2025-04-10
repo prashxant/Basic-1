@@ -3,10 +3,11 @@ import {  usePrev } from './hooks/hooksFetch';
 
 function CustomHook() {
   const [state , setState] = useState(0) ;
-  const prev = usePrev(state);
+  const prev = usePrev (state);
 return(<>
 
   <p>{state}</p>
+
   <button onClick={()=>{
     setState((curr)=>curr+1)
   }}>clickme</button>
