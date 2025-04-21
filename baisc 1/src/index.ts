@@ -33,3 +33,18 @@
 // delayed( function send (){
 //     console.log("hello")
 // })
+
+// root dir out dir 
+
+
+// function greet  (user: {
+//     name: string,
+//     age: number
+// }) {
+// console.log("hi" + user.name)
+// }
+
+// greet({
+//     name:"prashant",
+//     age: 77
+// })
