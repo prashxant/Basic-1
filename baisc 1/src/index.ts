@@ -48,16 +48,28 @@
     //     name:"prashant",
     //     age: 77
     // })
+    interface  Address {
+     
+            city: string,
+            country: string,
+            pincode: number
+        
+    }
 
     interface User {
         name: string,
         age : number,
-        address:  {
-            city: string,
-            country: string,
-            pincode: number
-        }
+        address: Address
     }
+
+    interface Office {
+        address: Address
+    }
+
+    // let user2: User ={
+    //     name : "keerti",
+    //     age:342
+    // }
 
     let user: User ={
         name: "Prashant",
@@ -78,3 +90,11 @@
      }
          
     }
+
+     const ans = isLegal(user);
+     if (ans) {
+        console.log("i am legal")
+        } else {
+            console.log("i am illlegal")
+            }
+      
