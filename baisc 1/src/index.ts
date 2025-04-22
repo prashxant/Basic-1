@@ -48,3 +48,33 @@
     //     name:"prashant",
     //     age: 77
     // })
+
+    interface User {
+        name: string,
+        age : number,
+        address:  {
+            city: string,
+            country: string,
+            pincode: number
+        }
+    }
+
+    let user: User ={
+        name: "Prashant",
+        age: 88,
+        address:{
+            city: "Tinsukia",
+            country: "India",
+            pincode: 786126
+        }
+    } 
+
+
+    function isLegal (user: User ): boolean{
+     if(user.age >= 18){
+        return true
+     }else {
+        return false
+     }
+         
+    }
