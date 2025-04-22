@@ -37,14 +37,14 @@
 // root dir out dir 
 
 
-// function greet  (user: {
-//     name: string,
-//     age: number
-// }) {
-// console.log("hi" + user.name)
-// }
+    // function greet  (user: {
+    //     name: string,
+    //     age: number
+    // }) {
+    // console.log("hi" + user.name)
+    // }
 
-// greet({
-//     name:"prashant",
-//     age: 77
-// })
+    // greet({
+    //     name:"prashant",
+    //     age: 77
+    // })
