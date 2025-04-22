@@ -114,7 +114,7 @@ root dir out dir
     
     class Manager implements People {
         name : string;
-        age : number;
+        age : number; yada
 
         constructor (name:string, age:number) {
             this.name = name;
